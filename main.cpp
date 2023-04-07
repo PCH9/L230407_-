@@ -8,7 +8,7 @@ using namespace std;
 int main()
 {
 	int BallNumber[45];
-	int Ball, Number;
+	int Catch, Number;
 
 	for (int i = 0; i < 45; ++i) // 배열 초기화
 	{
@@ -20,8 +20,11 @@ int main()
 	for (int i = 0; i < 6; ++i)
 	{
 		Number = rand() % (45 - i) + 1;
+		Catch = BallNumber[i];
+		BallNumber[i] = BallNumber[Catch];
+		BallNumber[Catch] = Number;
+		cout << BallNumber[i] << " ";
 	}
-	cout << Number;
 
 	return 0;
 }
