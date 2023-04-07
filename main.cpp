@@ -24,6 +24,7 @@ int main()
 		BallNumber[i] = BallNumber[Catch];
 		BallNumber[Catch] = Number;
 		cout << BallNumber[i] << " ";
+
 	}
 
 	return 0;
